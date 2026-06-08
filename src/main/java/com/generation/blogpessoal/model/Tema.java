@@ -15,7 +15,7 @@ import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 
 @Entity // Notação que demonstra que essa classe é uma entidade que será persistida em uma tb no bd
-@Table(name = "tb_temas") //Demonstra que essa classe, ao ser "convertida" em tabela terá o nome tb_temas
+@Table(name = "tb_categorias") //Demonstra que essa classe, ao ser "convertida" em tabela terá o nome tb_categorias
 public class Tema {
 
 	@Id //Mostra que esse será o id
