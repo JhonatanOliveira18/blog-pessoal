@@ -21,13 +21,13 @@ public class SwaggerConfig {
 	@Bean
 	OpenAPI springBlogPessoalOpenAPI() {
 		return new OpenAPI()
-				.info(new Info().title("Projeto Blog Pessoal").description("Projeto Blog Pessoal - Generation Brasil")
+				.info(new Info().title("Projeto Blog Pessoal").description("Projeto Blog Pessoal - Jhonatan Oliveira")
 						.version("v0.0.1")
-						.license(new License().name("Generation Brasil").url("https://brazil.generation.org/"))
-						.contact(new Contact().name("Generation Brasil").url("https://github.com/conteudoGeneration")
-								.email("conteudogeneration@generation.org")))
+						.license(new License().name("Jhonatan Oliveira").url("https://github.com/JhonatanOliveira18"))
+						.contact(new Contact().name("Jhonatan Oliveira").url("https://github.com/JhonatanOliveira18")
+								.email("oliveirajhonatanjesus18@gmail.com")))
 				.externalDocs(
-						new ExternalDocumentation().description("Github").url("https://github.com/conteudoGeneration/"))
+						new ExternalDocumentation().description("Github").url("https://github.com/JhonatanOliveira18"))
 				.components(new Components().addSecuritySchemes("jwt_auth", createSecurityScheme()))
 				.addSecurityItem(new SecurityRequirement().addList("jwt_auth"));
 	}

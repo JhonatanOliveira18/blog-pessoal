@@ -33,7 +33,7 @@ public class PostagemController {
 	private PostagemRepository postagemRepository;
 	
 	@Autowired
-	private TemaRepository temaRepository;
+	private TemaRepository TemaRepository;
 
 	@GetMapping
 	public ResponseEntity<List<Postagem>> getAll() {
@@ -58,7 +58,7 @@ public class PostagemController {
 	@PostMapping
 	public ResponseEntity<Postagem> post(@Valid @RequestBody Postagem postagem) {
 
-		if(temaRepository.existsById(postagem.getTema().getId())) {
+		if(TemaRepository.existsById(postagem.getTema().getId())) {
 			
 			postagem.setId(null);
 
@@ -77,7 +77,7 @@ public class PostagemController {
 
 		if (postagemRepository.existsById(postagem.getId())) {
 
-			if (temaRepository.existsById(postagem.getTema().getId()))
+			if (TemaRepository.existsById(postagem.getTema().getId()))
 				return ResponseEntity.status(HttpStatus.OK).body(postagemRepository.save(postagem));
 
 			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Tema não existe!", null);
